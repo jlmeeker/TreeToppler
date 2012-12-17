@@ -1,0 +1,5 @@
+main: org.meekers.plugins.treetoppler.TreeToppler
+name: TreeToppler
+version: 1.0
+author: Jared Meeker
+description: Causes a tree to be completely chopped down (given a certain probability).
