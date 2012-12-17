@@ -1,4 +1,4 @@
-treetoppler
+TreeToppler
 ==========
 
-A plug-in for a Minecraft Bukkit server.
+Slight chance for a tree to be instantly and completely chopped down.
