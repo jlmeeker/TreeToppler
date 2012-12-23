@@ -31,7 +31,7 @@ class TreeTopperListener implements Listener {
         //p.sendMessage(bd.getType().toString());
         if (bd.getType() == Material.LOG && oneshottopple == true) {
             //p.sendMessage("one shot topple triggered");
-            if (bd.getRelative(0, -1, 0).getType() != Material.LOG) {
+            if (bd.getRelative(0, -1, 0).getType() == Material.DIRT) {
                 //p.sendMessage("Destroying tree");
                 this.destroyTree(p, bd);
             }
