@@ -14,6 +14,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class TreeToppler extends JavaPlugin {
 
     public void onEnable() {
-        Bukkit.getPluginManager().registerEvents(new TreeTopperListener(), this);
+        this.saveDefaultConfig();
+        Bukkit.getPluginManager().registerEvents(new TreeTopperListener(this), this);
     }
 }

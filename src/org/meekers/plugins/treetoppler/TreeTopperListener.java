@@ -20,13 +20,21 @@ class TreeTopperListener implements Listener {
 
     public int brad = 3;
 
+    TreeToppler plugin;
+
+    public TreeTopperListener(TreeToppler plugin) {
+        this.plugin = plugin;
+        this.plugin.getServer().getPluginManager().registerEvents(this, plugin);
+    }
+    
     @EventHandler
     public void onTreeChop(BlockDamageEvent event) {
         Player p = event.getPlayer();
         Block bd = event.getBlock();
         Block curblock;
         Random rand = new Random();
-        boolean oneshottopple = rand.nextInt(20) == 0;
+        int maxrand = this.plugin.getConfig().getInt("maxrand");
+        boolean oneshottopple = rand.nextInt(maxrand) == 0;
 
         //p.sendMessage(bd.getType().toString());
         if (bd.getType() == Material.LOG && oneshottopple == true) {
