@@ -24,7 +24,6 @@ class TreeTopperListener implements Listener {
 
     public TreeTopperListener(TreeToppler plugin) {
         this.plugin = plugin;
-        this.plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
     
     @EventHandler
